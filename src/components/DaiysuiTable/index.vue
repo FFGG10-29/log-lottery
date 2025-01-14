@@ -50,7 +50,8 @@ const actionsColumns = computed<any[]>(() => {
                     <!-- action -->
                     <td v-for="(column, index) in actionsColumns" :key="index" class="flex gap-2">
                         <button class="btn btn-xs" v-for="action in column.actions" :key="action.name" :class="action.type"
-                            @click="action.onClick(item)">{{ action.label }}</button>
+                            @click
+                                ="action.onClick(item)">{{ action.label }}</button>
                     </td>
                 </tr>
             </tbody>

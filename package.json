@@ -1,11 +1,36 @@
 {
     "name": "log-lottery",
     "private": true,
-    "version": "0.0.3",
+    "version": "32.1.1",
+    "main": "electron/electron.mjs",
     "type": "module",
     "license": "MIT",
+
+
+    "build": {
+        "appId": "com.tdhglottery.newyear",
+        "productName": "通达化工抽奖小程序",
+        "copyright": "Copyright © 2024 <gjf>",
+        "mac": {
+            "category": "public.app-category.utilities"
+        },
+        "nsis": {
+            "oneClick": false,
+            "allowToChangeInstallationDirectory": true,
+            "deleteAppDataOnUninstall": true
+        },
+        "files": [
+            "dist/**/*",
+            "electron/**/*"
+        ],
+        "directories": {
+            "buildResources": "assets",
+            "output": "dist_electron"
+        }
+    },
     "scripts": {
-        "dev": "vite --host 0.0.0.0",
+        "electron:build": "electron-builder",
+        "dev": "concurrently vite \"nodemon --exec electron . --watch ./ --ext .js,.html,.css,.vue\"",
         "build": "vue-tsc --noEmit && vite build",
         "build:pre": "vue-tsc --noEmit && vite build --mode prebuild",
         "build:file": "vue-tsc --noEmit && vite build --mode file",
@@ -19,6 +44,7 @@
         "@vueuse/core": "^11.3.0",
         "axios": "^1.7.8",
         "canvas-confetti": "^1.9.3",
+        "concurrently": "^9.1.2",
         "dayjs": "^1.11.13",
         "github-markdown-css": "^5.8.0",
         "localforage": "^1.10.0",
@@ -54,11 +80,14 @@
         "@vue/test-utils": "^2.4.6",
         "autoprefixer": "^10.4.20",
         "daisyui": "^4.12.14",
+        "electron": "^33.3.1",
+        "electron-builder": "^25.1.8",
         "eslint": "^9.15.0",
         "eslint-plugin-vue": "^9.31.0",
         "happy-dom": "^15.11.6",
         "husky": "^9.1.7",
         "jsdom": "^25.0.1",
+        "nodemon": "^3.1.9",
         "path": "^0.12.7",
         "postcss": "^8.4.49",
         "rollup-plugin-visualizer": "^5.12.0",

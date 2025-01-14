@@ -34,14 +34,6 @@ const tableColumnsList = [
         props: 'name',
     },
     {
-        label: '部门',
-        props: 'department',
-    },
-    {
-        label: '身份',
-        props: 'identity',
-    },
-    {
         label: '奖品',
         props: 'prizeName',
         sort: true
@@ -68,14 +60,6 @@ const tableColumnsDetail = [
     {
         label: '姓名',
         props: 'name',
-    },
-    {
-        label: '部门',
-        props: 'department',
-    },
-    {
-        label: '身份',
-        props: 'identity',
     },
     {
         label: '奖品',

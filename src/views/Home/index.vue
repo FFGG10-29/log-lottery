@@ -141,7 +141,7 @@ const init = () => {
 
         const detail = document.createElement('div');
         detail.className = 'card-detail';
-        detail.innerHTML = `${tableData.value[i].department}<br/>${tableData.value[i].identity}`;
+        // detail.innerHTML = `${tableData.value[i].department}<br/>${tableData.value[i].identity}`;
         element.appendChild(detail);
 
         element = useElementStyle(element, tableData.value[i], i, patternList.value, patternColor.value, cardColor.value, cardSize.value, textSize.value)

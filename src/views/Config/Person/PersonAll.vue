@@ -50,9 +50,7 @@ const exportData = () => {
     dataString = dataString
         .replaceAll(/uid/g, '编号')
         .replaceAll(/isWin/g, '是否中奖')
-        .replaceAll(/department/g, '部门')
         .replaceAll(/name/g, '姓名')
-        .replaceAll(/identity/g, '身份')
         .replaceAll(/prizeName/g, '获奖')
         .replaceAll(/prizeTime/g, '获奖时间')
 
@@ -86,14 +84,6 @@ const tableColumns = [
     {
         label: '姓名',
         props: 'name',
-    },
-    {
-        label: '部门',
-        props: 'department',
-    },
-    {
-        label: '身份',
-        props: 'identity',
     },
     {
         label: '是否已中奖',
