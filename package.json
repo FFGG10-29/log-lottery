@@ -5,8 +5,6 @@
     "main": "electron/electron.mjs",
     "type": "module",
     "license": "MIT",
-
-
     "build": {
         "appId": "com.tdhglottery.newyear",
         "productName": "通达化工抽奖小程序",

@@ -2,17 +2,11 @@
 
 import { app, BrowserWindow } from 'electron';
 import path from 'node:path';
-
-// 创建桌面程序
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-
-// 获取当前目录
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-// 导出__dirname以供Electron应用程序使用
-global.__dirname = __dirname;
+// import { fileURLToPath } from 'url';
+// import { dirname } from 'path';
+//
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
 const createBrowserWindow = () => {
     // 创建大小
     const ELEwin = new BrowserWindow({
@@ -29,11 +23,11 @@ const createBrowserWindow = () => {
             enableRemoteModule: true,
             // ？
             devTools: true,
-            preload: path.join(__dirname, 'preload.js')
+            // preload: path.join(__dirname, 'preload.js')
         }
     })
     // 读取链接
-    ELEwin.loadURL("http://localhost:6719/log-lottery/")
+    ELEwin.loadURL("https://log1997.github.io/log-lottery/home/")
     // 判断是否是开发者环境
     // ELEwin.loadURL(
     //     process.env.NODE_ENV === 'development'
